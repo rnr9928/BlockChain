@@ -1,0 +1,28 @@
+{
+  "devDependencies": {
+    "@babel/preset-env": "^7.19.4",
+    "@babel/preset-typescript": "^7.18.6",
+    "@types/crypto-js": "^4.1.1",
+    "@types/express": "^4.17.14",
+    "@types/jest": "^29.2.1",
+    "@types/merkle": "^0.6.1",
+    "@types/node": "^18.11.9",
+    "@types/ws": "^8.5.3",
+    "babel-core": "^6.26.3",
+    "nodemon": "^2.0.20",
+    "ts-jest": "^29.0.3",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.1.0",
+    "typescript": "^4.8.4"
+  },
+  "scripts": {
+    "start": "ts-node ./index.ts"
+  },
+  "dependencies": {
+    "crypto-js": "^4.1.1",
+    "express": "^4.18.2",
+    "hex-to-binary": "^1.0.1",
+    "merkle": "^0.6.0",
+    "ws": "^8.11.0"
+  }
+}
