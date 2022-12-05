@@ -1,0 +1,15 @@
+{
+    "name": "KG NFT",
+    "description": "haha NFT",
+    "image": "https://gateway.pinata.cloud/ipfs/QmNZ4Y9mfo9KnwuttyDJns1Ergb3LXqUsmtrQnZGRGTMNw",
+    "attributes": [
+      {
+        "trait_type": "Rank",
+        "value": 1
+      },
+      {
+        "trait_type": "Type",
+        "value": 1
+      }
+    ]
+  }
