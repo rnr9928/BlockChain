@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./node_modules/web3/dist/web3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <label for="">마이닝 스레드 갯수</label>"
+    <input id="miner_count" type="number">
+    <button id="miner_start">마이닝 시작</button>
+    <button id="miner_stop">마이닝 중지</button>
+    <div id="block"></div>
+</body>
+<script>
+    const web3 = new Web3(new Web3.providers.WebsocketProvider("ws://127.0.0.1:9005"))
+    web3.eth.subscribe("newBlockHeaders", function(err,res){
+        if(!err)
+        {
+            block.innerHTML += JSON.stringify(res);
+            // console.log(res);
+        }
+    })
+
+    miner_start.onclick = function(){
+        axios.post('http://localhost:9000',{
+            jsonrpc:"2.0",
+            id : 1,
+            method : "miner_start",
+            params : [Number(miner_count.value)]
+        })
+        // console.log("시작")
+    }
+    miner_stop.onclick = function(){
+        axios.post('http://localhost:9000',{
+            jsonrpc:"2.0",
+            id : 1,
+            method : "miner_stop",
+            params : []
+        })
+        // console.log("스탑")
+    }
+
+</script>
+
+</html>
